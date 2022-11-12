@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Exam 02 for MCGA - 15/11/22
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This is a exam for MCGA and the purpose is make CRUD operations with http methods.
+The languages used were Node.js, NPM & Express.js and database in No-SQL structure in MongoDB, using Mongoose as ODM and Mongo Atlas as cloud service for the DB.
 
-### `npm start`
+The database contains field for save ID, name, price, stock and description of products.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+------- agregar la descripcion aca -------
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+This project contain these endpoints:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* 1: GET
+    * 1.1: /exam_01_mcga/products: this return the message Connection OK if the response of the server was succefull with code 200.
+    * 1.2: /exam_01_mcga/products/all: this return all the products of the database.
+    * 1.3: /exam_01_mcga/products/name/"name of product": this search the information about the product with name wanted.
+    * 1.4: /exam_01_mcga/products/id/"id of product": this search the information about the product with id wanted.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* 2: POST
+    * 2.1: /exam_01_mcga/products: this function is for add a new product in the database. The structure of the command is (all are required):
+        {
+            "name":"name of product",                   ==> type string
+            "price":"price of product",                 ==> type number
+            "stock":"stock of product",                 ==> type number
+            "description": "description of product"     ==> type string
+        }
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* 3: DELETE
+    * 3.1: /exam_01_mcga/products/"id of product": this function is for fisic delete of product.
 
-### `npm run eject`
+* 4: PUT
+    * 4.1: /exam_01_mcga/products/"id of product": this function is for update a field or fields of product existing in the database. The Syntax is the same as point 2.1, but with the new values.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+------ editar con lo que va aca --------
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+dotenv: version 16.0.3
+express: version 4.18.1
+mongoose: version 6.6.3
+routers: version 0.1.4
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---- agregar las dependencias que falten -----
 
-## Learn More
+### Installing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---- poner los comandos aca ---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Authors
+Marcos Zalazar
+Pablo Toledo
 
-### Code Splitting
+## Version History
+* 0.1
+    * Initial Release
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+None
